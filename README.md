@@ -1,17 +1,19 @@
 ---
-page_type: sample
-languages:
-- nodejs
-- javascript
-products:
-- azure
-- azure-app-service
-description: "This sample demonstrates a tiny Hello World Node.js app for Azure App Service."
+Type: Web App
+Technologies:
+- Nodejs
+- Javascript
+- Express
+- Mongodb
+- React
+Cloud Deployment:
+- Azure
+Description: "FITNESS TRACKER is a cloud based web application that enables users to create and track custom workouts"
 ---
 
-# Node.js Hello World
+# FITNESS TRACKER
 
-This sample demonstrates a tiny Hello World node.js app for [App Service Web App](https://docs.microsoft.com/azure/app-service-web).
+FITNESS TRACKER is a cloud based web application that enables users to create and track custom workouts [Cloud First App](https://docs.microsoft.com/en-us/azure/?product=featured).
 
 ## Contributing
 
