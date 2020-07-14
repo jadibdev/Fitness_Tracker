@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/9309d3c6-1932-41eb-b93f-ed1fe6ee65ce/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/FitnessTrack",
+    "appService.deploySubpath": "."
+}
