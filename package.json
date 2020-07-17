@@ -1,19 +1,26 @@
 {
-    "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
+    "name": "Fitness_Tracker_on_Azure",
+    "description": "Fitness Tracker built with the mern stack and deployed on Azure",
     "version": "0.0.1",
     "private": true,
     "license": "MIT",
-    "author": "Microsoft",
+    "author": "Mohamed Jadib",
     "scripts": {
         "start": "node index.js"
     },
     "dependencies": {
+        "@auth0/auth0-react": "^1.0.0",
         "@material-ui/icons": "^5.0.0-alpha.1",
         "axios": "^0.19.2",
+        "bcrypt": "^5.0.0",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
+        "helmet": "^3.23.3",
         "mongoose": "^5.9.24",
+        "morgan": "^1.10.0",
         "nodemon": "^2.0.4"
+    },
+    "devDependencies": {
+        "eslint": "^7.4.0"
     }
 }

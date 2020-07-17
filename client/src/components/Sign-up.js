@@ -16,6 +16,7 @@ import Container from '@material-ui/core/Container';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import { useForm } from "react-hook-form";
 import axios from 'axios'
+import logo from '../images/logo.ico'
 
 function Copyright() {
 	return (
@@ -74,7 +75,7 @@ export default function SignUp(props) {
 	//console.log(watch("example"));
 	return (
 			<Container component="main" maxWidth="xs">
-				<FitnessCenterIcon className={classes1.root} color="primary" />
+			<FitnessCenterIcon className={classes1.root} color="primary" />
 					<CssBaseline />
 					<div className={classes.paper}>
 							<Avatar className={classes.avatar}>
@@ -90,7 +91,7 @@ export default function SignUp(props) {
 								const password = data.password
 								const userData = data
 
-								axios.post('http://localhost:1337/users/add', userData)
+								axios.post('http://localhost:1337/createUser', userData)
 									.then(() => {window.location='/'})
 
 								console.log(data.firstName, data.lastName, data.email, data.password)

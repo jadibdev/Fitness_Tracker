@@ -60,7 +60,8 @@ const logoStyle = makeStyles({
         top: 20,
         left: 50,
     }
-}) 
+})
+
 
 
 export default function SignIn() {
@@ -92,10 +93,7 @@ export default function SignIn() {
                     const password = data.password
                     const userData = data
 
-                    axios.post('http://localhost:1337/signin', userData)
-                        .then(res => res.send(userData))
-
-                    console.log(data.email, data.password)
+                    console.log(userData)
                 })}>
                     <TextField
                         variant="outlined"
