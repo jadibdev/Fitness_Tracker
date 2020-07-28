@@ -8,8 +8,8 @@ const User = require('./models/user.model')
 const morgan = require('morgan')
 // this is for security, 
 const helmet = require('helmet')
-
 const middlewares = require('./middlewares')
+const Workout = require('./models/workout.model')
 
 require('dotenv').config()
 
@@ -38,6 +38,8 @@ app.get('/', function (req, res) {
     })
 });
 
+
+
 app.get('/sf', (req, res) => {
     res.json({
         message: "SF! I'm coming back"
@@ -49,7 +51,11 @@ app.post('/sf', (req, res) => {
     res.send('check server logs ...')
 })
 
+const Workouts = require('./routes/workouts')
+app.use('/Workouts', Workouts)
 
+const usersRoutes = require('./routes/usersRoutes')
+app.use('/users', usersRoutes)
 /* this middleware is for creating the not-found error
     setting the status to 404 then passing the error to the error handler*/
 app.use(middlewares.notFound)
