@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "cities.json": "^1.1.5",
     "mapbox-gl": "^1.11.1",
+    "material-ui-image": "^3.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.8.0",
     "react-hook-form": "^6.1.0",
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

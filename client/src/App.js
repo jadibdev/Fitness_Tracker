@@ -8,7 +8,7 @@ import SignIn from './components/Sign-in.js'
 import UsersList from './components/Users'
 import App2 from './components/codeShop'
 import CountEverything from './components/total'
-import SpecialData from './components/codeShop'
+import ImageAvatars from './components/codeShop'
 import LoggedIn from './components/LoggedIn'
 import CreateExercise from './components/create-exercise'
 
@@ -22,9 +22,8 @@ function App() {
       <Route path="/SignIn" component={SignIn} />
       <Route path="/SignUp" component={SignUp} />
       <Route path="/users" component={UsersList} />
-      <Route path="/codeShop" component={SignIn} />
+      <Route path="/codeShop" component={ImageAvatars} />
       <Route path="/total" component={CountEverything} />
-      <Route path="/specialdata" component={SpecialData} />
       <Route path="/LoggedIn" component={LoggedIn} />
       <Route path="/CreateExercise" component={CreateExercise} />
     </Router>

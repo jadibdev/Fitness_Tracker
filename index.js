@@ -8,14 +8,19 @@ const User = require('./models/user.model')
 const morgan = require('morgan')
 // this is for security, 
 const helmet = require('helmet')
+const passport = require('passport')
+const LocalStrategy = require('passport-local')
+const passportJWT = require('passport-jwt')
+
 const middlewares = require('./middlewares')
 const Workout = require('./models/workout.model')
+
+
 
 require('dotenv').config()
 
 const app = express()
 const port = process.env.PORT || 1337
-
 
 app.use(helmet())
 app.use(cors())
@@ -32,24 +37,6 @@ connection.once('open', () => {
 }) 
 
 
-app.get('/', function (req, res) {
-    res.json({
-        message: "main route was requested ..."
-    })
-});
-
-
-
-app.get('/sf', (req, res) => {
-    res.json({
-        message: "SF! I'm coming back"
-    })
-})
-
-app.post('/sf', (req, res) => {
-    console.log('You just posted:', req.body)
-    res.send('check server logs ...')
-})
 
 const Workouts = require('./routes/workouts')
 app.use('/Workouts', Workouts)

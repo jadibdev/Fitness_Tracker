@@ -25,6 +25,8 @@ import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import ForumIcon from '@material-ui/icons/Forum';
 
 import { IconButton } from '@material-ui/core';
+import SignIn from './Sign-in'
+import Image from 'material-ui-image'
 
 
 const useStyles = makeStyles({
@@ -37,7 +39,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function TemporaryDrawer(props) {
+export default function LoggedIn(props) {
     const classes = useStyles();
     const [state, setState] = React.useState({
         top: false,
@@ -64,24 +66,22 @@ export default function TemporaryDrawer(props) {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <Divider />
-						<List>
-								<ListItem button >
-									
-						<ListItemText style={{ fontSize: 36, color: "#bf1650"}}>FITNESS TRACKER</ListItemText>
-								</ListItem>
-								<ListItem button >
-									<ListItemIcon><Brightness1Icon style={{ color: "#bf1650", border: "1px solid white"}}/></ListItemIcon>
-									<ListItemText>Mohamed Jadib</ListItemText>
-								</ListItem>
-								<ListItem button >
-									<ListItemIcon><FitnessCenterIcon style={{ color: "#bf1650"}}/></ListItemIcon>
-									<ListItemText>Workouts</ListItemText>
-								</ListItem>
-								<ListItem button >
-									<ListItemIcon><ForumIcon style={{ color: "#bf1650"}}/></ListItemIcon>
-									<ListItemText>Community</ListItemText>
-								</ListItem>
-					
+			<List>
+				<ListItem button >		
+					<ListItemText style={{ fontSize: 36, color: "#bf1650"}}>FITNESS TRACKER</ListItemText>
+				</ListItem>
+				<ListItem button >
+					<ListItemIcon><Brightness1Icon style={{ color: "#ec5990", border: "1px solid white"}}/></ListItemIcon>
+					<ListItemText style={{ color: "#bf1650"}}>{}</ListItemText>
+				</ListItem>
+				<ListItem button >
+					<ListItemIcon><FitnessCenterIcon style={{ color: "#bf1650"}}/></ListItemIcon>
+					<ListItemText>Workouts</ListItemText>
+				</ListItem>
+				<ListItem button >
+					<ListItemIcon><ForumIcon style={{ color: "#bf1650"}}/></ListItemIcon>
+					<ListItemText>Community</ListItemText>
+				</ListItem>
             </List>
         </div>
     );
@@ -106,8 +106,10 @@ export default function TemporaryDrawer(props) {
 					<AddCircleOutlineIcon style={{ fontSize: 40, marginTop: 25, color: "#bf1650"}}/>	
 				</Grid>
 				<Grid container>
-					<Grid item xs={12}>
-					
+					<Grid item xs={3}>
+						<Image
+							src="http://loremflickr.com/300/200"
+						/>
 					</Grid>
 				</Grid>
 			</Grid>
